@@ -1,0 +1,155 @@
+* {
+    border-radius: 25px;
+    text-align: left;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "header header header header"
+    "form form form form"
+    "race race race race"
+    "table table table table";
+
+}
+
+.the-form {
+    padding: 1%;
+    grid-area: form;
+    background-color: teal;
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-rows: 45% 45% 10%;
+    grid-template-areas: 
+    "image name choice"
+    "image bet  multiplier"
+    ".      submit      .";
+    text-align: center;
+
+}
+
+.placeholder {
+    grid-area: image;
+}
+.name {
+    grid-area: name;
+    padding: 1%;
+    background-color: tomato;
+}
+.choice {
+    grid-area: choice;
+}
+.multiplier {
+    grid-area: multiplier;
+}
+.bet {
+    grid-area: bet;
+}
+.submit {
+    grid-area: submit;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+.display-box {
+    grid-area: race;
+    margin-left: auto;
+    margin-right: auto;
+    height: 25%;
+    width: 80vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "header"
+    "one"
+    "two"
+    "three"
+    "four";
+    gap: 5px;
+    
+}
+
+h1 {
+    grid-area: header;
+    text-align: center;
+}
+
+.loading-banner:nth-of-type(1) {
+    grid-area: one;
+    width: 5%;
+    height: 100%;
+    background-color: #26648e;
+    animation: stretch 6s  infinite;
+    animation-timing-function: ease-in;
+}
+
+
+#one > i {
+    
+    animation: sideside 6s  infinite;
+    animation-timing-function: ease-in;
+}
+.loading-banner:nth-of-type(2) {
+    grid-area: two;
+    width: 5%;
+    height: 100%;
+    background-color: #4f8fc0;
+    animation: stretch 3s  infinite;
+    animation-timing-function: ease-in;
+}
+
+#two > i {
+    animation: sideside 3s  infinite;
+    animation-timing-function: ease-in;
+}
+.loading-banner:nth-of-type(3) {
+    grid-area: three;
+    width: 5%;
+    height: 100%;
+    background-color: #53D2DC;
+    animation: stretch 9s  infinite;
+    animation-timing-function: ease-in;
+}
+#three > i {
+    animation: sideside 9s  infinite;
+    animation-timing-function: ease-in;
+}
+.loading-banner:nth-of-type(4) {
+    grid-area: four;
+    width: 5%;
+    height: 100%;
+    background-color: #FFE3B3;
+    animation: stretch 12s  infinite ;
+    animation-timing-function: ease-in;
+}
+#four > i {
+    animation: sideside 12s  infinite ;
+    animation-timing-function: ease-in;
+}
+
+
+@keyframes stretch{
+    from {
+        width: 5%;
+    }
+
+    to {
+        width: 100%;
+    }
+
+}
+
+@keyframes sideside {
+    from {
+        transform: translatex(0px);
+    }
+
+    to {
+        transform: translatex(78vw);
+    }
+}
